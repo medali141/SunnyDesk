@@ -27,6 +27,12 @@ private slots:
     bool verifierChamps(QString , QString , QString,  QString );
 
 
+    void on_Rtri_clicked();
+
+    void on_Rtri_2_clicked();
+
+    void on_rechID_clicked();
+
 private:
     Ui::MainWindow *ui;
     Matriel M;

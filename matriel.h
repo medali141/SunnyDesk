@@ -33,8 +33,8 @@ public:
     // Recherche et Tri
     QSqlQueryModel* rechercher(QString id_mat);
     bool rech(QString idMat);
-    QSqlQueryModel* trierParNom();
-    QSqlQueryModel* trierParQuantite();
+    QSqlQueryModel* trierParqt();
+    QSqlQueryModel* trierNOMMAT();
 
 private:
     QString id_mat;

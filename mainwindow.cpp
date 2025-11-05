@@ -150,3 +150,65 @@ void MainWindow::on_afficherMar_clicked()
     Matriel M;
     ui->tabMAT->setModel(M.afficher());
 }
+
+void MainWindow::on_Rtri_clicked()
+{
+    Matriel M;
+    ui->tabMAT->setModel(M.trierParqt());
+
+     QMessageBox msgBox;
+
+
+
+    QMessageBox::information(nullptr, QObject::tr("database is open"),
+                     QObject::tr("tri successfully.\n"
+                                 "Click Cancel to exit."), QMessageBox::Cancel);
+
+
+
+}
+
+
+void MainWindow::on_Rtri_2_clicked()
+{
+
+    Matriel M;
+    ui->tabMAT->setModel(M.trierNOMMAT());
+
+    QMessageBox msgBox;
+
+
+
+    QMessageBox::information(nullptr, QObject::tr("database is open"),
+                             QObject::tr("tri successfully.\n"
+                                         "Click Cancel to exit."), QMessageBox::Cancel);
+}
+
+
+void MainWindow::on_rechID_clicked()
+{
+    Matriel M;
+    QString id=ui->recherch_id->text();
+    QSqlQueryModel *verif=M.rechercher(id);
+    if(M.rech(id))
+    {
+        if (verif!=nullptr)
+        {
+            ui->tabMAT->setModel((verif));
+            QMessageBox::information(this, QObject::tr("recherche successfully!"),
+                                     QObject::tr("recherche successfully!.\n" "Click Cancel to exit."), QMessageBox::Cancel);
+
+        }
+        else
+        {
+            QMessageBox::information(this, QObject::tr("recherche failed!"),
+                                     QObject::tr("recherche failed!.\n" "Click Cancel to exit."), QMessageBox::Cancel);
+        }}
+    else{ QMessageBox::critical(nullptr, QObject::tr("Not found"),
+                              QObject::tr("Not found \n"
+                                          "Click Cancel to exit."), QMessageBox::Cancel);
+
+    }
+}
+
+

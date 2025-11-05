@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1101</width>
+    <width>1134</width>
     <height>699</height>
    </rect>
   </property>
@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>Ajouter Client</string>
+     <string>Ajouter/Modifier  Matriel</string>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
@@ -148,8 +148,8 @@
    <widget class="QPushButton" name="supprimerMat">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>470</y>
+      <x>190</x>
+      <y>460</y>
       <width>131</width>
       <height>61</height>
      </rect>
@@ -171,8 +171,8 @@
    <widget class="QLineEdit" name="idMAT_Delete">
     <property name="geometry">
      <rect>
-      <x>22</x>
-      <y>479</y>
+      <x>30</x>
+      <y>470</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -181,8 +181,8 @@
    <widget class="QPushButton" name="afficherMar">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>560</y>
+      <x>450</x>
+      <y>450</y>
       <width>131</width>
       <height>61</height>
      </rect>
@@ -191,13 +191,62 @@
      <string>Affichage</string>
     </property>
    </widget>
+   <widget class="QRadioButton" name="Rtri">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>470</y>
+      <width>141</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>tri par % Quantite</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Rtri_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>490</y>
+      <width>191</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>tri par % Nom Matricule </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="recherch_id">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>480</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rechID">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>460</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rechercher par ID</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1101</width>
+     <width>1134</width>
      <height>25</height>
     </rect>
    </property>

@@ -106,17 +106,29 @@ bool Matriel::rech(QString idMat)
 
 
 // --- TRI ---
-QSqlQueryModel* Matriel::trierParNom()
-{
-    QSqlQueryModel* model = new QSqlQueryModel();
-    model->setQuery("SELECT * FROM MATRIEL ORDER BY NOMMAT ASC");
-    return model;
-}
-
-QSqlQueryModel* Matriel::trierParQuantite()
+QSqlQueryModel* Matriel::trierParqt()
 {
     QSqlQueryModel* model = new QSqlQueryModel();
     model->setQuery("SELECT * FROM MATRIEL ORDER BY QUANTITE ASC");
+
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID_MAT"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOMMAT"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("QUANTITE"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("DISPONIBILITE"));
+
+    return model;
+}
+
+QSqlQueryModel* Matriel::trierNOMMAT()
+{
+    QSqlQueryModel* model = new QSqlQueryModel();
+    model->setQuery("SELECT * FROM MATRIEL ORDER BY NOMMAT ASC");
+
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID_MAT"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOMMAT"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("QUANTITE"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("DISPONIBILITE"));
+
     return model;
 }
 

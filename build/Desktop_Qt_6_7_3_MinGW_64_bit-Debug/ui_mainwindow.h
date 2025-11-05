@@ -18,6 +18,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableView>
 #include <QtWidgets/QToolBar>
@@ -44,6 +45,10 @@ public:
     QTableView *tabMAT;
     QLineEdit *idMAT_Delete;
     QPushButton *afficherMar;
+    QRadioButton *Rtri;
+    QRadioButton *Rtri_2;
+    QLineEdit *recherch_id;
+    QPushButton *rechID;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -52,7 +57,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1101, 699);
+        MainWindow->resize(1134, 699);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName("centralWidget");
         groupBox = new QGroupBox(centralWidget);
@@ -90,20 +95,32 @@ public:
         modifierMat->setGeometry(QRect(200, 320, 131, 61));
         supprimerMat = new QPushButton(centralWidget);
         supprimerMat->setObjectName("supprimerMat");
-        supprimerMat->setGeometry(QRect(170, 470, 131, 61));
+        supprimerMat->setGeometry(QRect(190, 460, 131, 61));
         tabMAT = new QTableView(centralWidget);
         tabMAT->setObjectName("tabMAT");
         tabMAT->setGeometry(QRect(450, 40, 611, 401));
         idMAT_Delete = new QLineEdit(centralWidget);
         idMAT_Delete->setObjectName("idMAT_Delete");
-        idMAT_Delete->setGeometry(QRect(22, 479, 131, 31));
+        idMAT_Delete->setGeometry(QRect(30, 470, 131, 31));
         afficherMar = new QPushButton(centralWidget);
         afficherMar->setObjectName("afficherMar");
-        afficherMar->setGeometry(QRect(360, 560, 131, 61));
+        afficherMar->setGeometry(QRect(450, 450, 131, 61));
+        Rtri = new QRadioButton(centralWidget);
+        Rtri->setObjectName("Rtri");
+        Rtri->setGeometry(QRect(600, 470, 141, 25));
+        Rtri_2 = new QRadioButton(centralWidget);
+        Rtri_2->setObjectName("Rtri_2");
+        Rtri_2->setGeometry(QRect(600, 490, 191, 25));
+        recherch_id = new QLineEdit(centralWidget);
+        recherch_id->setObjectName("recherch_id");
+        recherch_id->setGeometry(QRect(800, 480, 131, 31));
+        rechID = new QPushButton(centralWidget);
+        rechID->setObjectName("rechID");
+        rechID->setGeometry(QRect(940, 460, 131, 61));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName("menuBar");
-        menuBar->setGeometry(QRect(0, 0, 1101, 25));
+        menuBar->setGeometry(QRect(0, 0, 1134, 25));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName("mainToolBar");
@@ -120,7 +137,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Gestion des Clients", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Ajouter Client", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Ajouter/Modifier  Matriel", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "idMAT", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "nomMAT", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Quantite", nullptr));
@@ -129,6 +146,9 @@ public:
         modifierMat->setText(QCoreApplication::translate("MainWindow", "Modifier", nullptr));
         supprimerMat->setText(QCoreApplication::translate("MainWindow", "Supprimer", nullptr));
         afficherMar->setText(QCoreApplication::translate("MainWindow", "Affichage", nullptr));
+        Rtri->setText(QCoreApplication::translate("MainWindow", "tri par % Quantite", nullptr));
+        Rtri_2->setText(QCoreApplication::translate("MainWindow", "tri par % Nom Matricule ", nullptr));
+        rechID->setText(QCoreApplication::translate("MainWindow", "Rechercher par ID", nullptr));
     } // retranslateUi
 
 };
